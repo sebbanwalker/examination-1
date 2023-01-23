@@ -1,5 +1,5 @@
 # Grupexamination
-
+![screen](screen.png)
 ## Inlämningsuppgift
 Klassiska hänga gubbe med HTML, CSS och JS.
 Du ska bygga det klassiska spelet hangman ( el. hänga gubbe på svenska ).
