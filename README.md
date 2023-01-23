@@ -1,7 +1,25 @@
 # Grupexamination
 
 ## Inlämningsuppgift
+Klassiska hänga gubbe med HTML, CSS och JS.
+Du ska bygga det klassiska spelet hangman ( el. hänga gubbe på svenska ).
 
-https://gist.github.com/zocom-christoffer-wallenberg/7ca8cb04e926a47b7d8a392bd96fbde8
+Godkänt:
+Förståelse för grunderna i JS.
+T.ex: Arrays, loopar och eventlyssnare.
+Inlämnat i tid.
+
+Väl godkänt:
+Snygg och ren kod.
+Bra förklarat under redovisningen.
+Poängräknare.
+
+Level ups
+(om ni blir klara någon dag innan inlämning)
+Stiliga animationer
+Timer
+Tidsaspekt i poängsättningen
+Valbar komplexitetsnivå på figur och ord
+Egna level ups
 
 Startkod (`hangman-assignment`) hittar ni i detta repo.
