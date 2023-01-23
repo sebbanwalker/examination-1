@@ -11,7 +11,7 @@ Inlämnat i tid.
 
 Väl godkänt:
 Snygg och ren kod.
-Bra förklarat under redovisningen.
+Bra kommenterat.
 Poängräknare.
 
 Level ups
