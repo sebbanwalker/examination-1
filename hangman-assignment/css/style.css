@@ -120,3 +120,45 @@ section.game-over.show {
 .game-over > a:hover {
     opacity: 1;
 }
+
+section.game-won {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.9);
+    z-index: 999;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+section.game-won.show {
+    display: flex;
+}
+
+.game-won > h1 {
+    font-size: 6rem;
+    margin: 0;
+}
+
+.game-won > p {
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+}
+
+.game-won > a {
+    background: white;
+    color: #222;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    margin-top: 4rem;
+    border-radius: .25rem;
+    opacity: .8;
+}
+
+.game-won > a:hover {
+    opacity: 1;
+}
