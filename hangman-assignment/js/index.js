@@ -19,6 +19,7 @@ let used;
 let ul;
 let wrongGuessesLeft = 5;
 let emptyLeft;
+let lettersFound;
 
 //Eventlyssnare för skrivbordsinput, endast engelska alfabetet stöds
 
@@ -43,8 +44,15 @@ document.addEventListener("DOMContentLoaded", function() {
     wordBuilder();
   });
 
+
+
+//Lägger in ordet i spelet
 function wordBuilder() {
-    ul = document.getElementById('word');
+    ul = document.getElementById('word');;
+    let word = document.createTextNode(chosenWord);
+    let b = document.getElementById('b');
+    b.appendChild(word);
+    console.log("b equals: " + document.getElementsByTagName('b').innerHTML);
     for(let i = 0; i < chosenWord.length; i++) {
         let li = document.createElement('li');
         li.appendChild(document.createTextNode(' '));
@@ -58,6 +66,8 @@ function wordBuilder() {
 function wordTracker() {
     let list = ul.getElementsByTagName('li');
     let correct = false;
+    emptyLeft = 0;
+    lettersFound = 0;
     for(let i = 0; i < chosenWord.length; i++) {
         
         if (chosenWord.charAt(i) == keyPressed) {
@@ -70,15 +80,14 @@ function wordTracker() {
     }
 
     for(let i = 0; i < chosenWord.length; i++) {
-        emptyLeft = 0;
         if (list[i].innerHTML == ' ') {
             emptyLeft++;
             console.log("spaces found");
 
         } 
         else {
-            emptyLeft = false;
-            console.log("no spaces found");
+            lettersFound++;
+            console.log("letters found");
         }
     }
 
@@ -97,6 +106,7 @@ function wordTracker() {
     }
 
     if(emptyLeft == 0) {
+        saveData();
         document.getElementById("game-won").style.display = "flex";
     }
 }
@@ -127,5 +137,11 @@ function lives(wrongGuessesLeft) {
             document.getElementById("game-over").style.display = "flex";
             break;
     }
+}
+
+//Funktion som sparar poäng till en textfil.
+
+function saveData() {
+
 }
 
