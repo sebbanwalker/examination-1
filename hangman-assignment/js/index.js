@@ -1,13 +1,3 @@
-/**
- För att toggla SVG:en
- document.querySelector('figure').classList.add('scaffold')
- document.querySelector('figure').classList.add('head')
- document.querySelector('figure').classList.add('body')
- document.querySelector('figure').classList.add('arms')
- document.querySelector('figure').classList.add('legs')
-
- */
-
 let keyPressed = '';
 let chosenWord = '';
 let chosenWordArray = [];
@@ -20,6 +10,7 @@ let ul;
 let wrongGuessesLeft = 5;
 let emptyLeft;
 let lettersFound;
+let score = "score=0";
 
 //Eventlyssnare för skrivbordsinput, endast engelska alfabetet stöds
 
@@ -39,6 +30,7 @@ let lettersFound;
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+    score = document.cookie;
     chosenWord = words[Math.floor(Math.random()*words.length)];
     console.log(chosenWord);
     wordBuilder();
@@ -139,9 +131,11 @@ function lives(wrongGuessesLeft) {
     }
 }
 
-//Funktion som sparar poäng till en textfil.
+//Funktion som sparar poäng till en textfil. **EJ KLAR**
 
 function saveData() {
+    let cookie = document.cookie;
 
+    console.log(document.cookie);
 }
 
